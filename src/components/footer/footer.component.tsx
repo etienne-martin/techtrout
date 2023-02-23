@@ -75,7 +75,9 @@ export const Footer: FC = () => {
             not here to inform you. If you&apos;re looking for actual news,
             you&apos;ve come to the wrong place.
           </p>
-          <p className="text-neutral-700 text-xs">© 2023 techtrout</p>
+          <p className="text-neutral-700 text-xs">
+            © {new Date().getFullYear()} techtrout
+          </p>
         </div>
       </Container>
     </footer>
