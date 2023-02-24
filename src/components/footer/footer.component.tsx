@@ -20,9 +20,10 @@ export const Footer: FC = () => {
             <div className="grid gap-8">
               <p className="text-sm">
                 <Balancer>
-                  We keep you informed on the latest news in the tech industry.
-                  Join us as we explore the increasingly depressing landscape of
-                  technology, and discover what the future holds for all of us.
+                  The most trustworthy source of satirical tech news on the
+                  internet. Join us as we explore the increasingly depressing
+                  landscape of technology, and discover what the future holds
+                  for all of us.
                 </Balancer>
               </p>
             </div>
