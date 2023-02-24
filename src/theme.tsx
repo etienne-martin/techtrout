@@ -15,17 +15,20 @@ import { Paragraph } from "./components/paragraph/paragraph.component";
 import { Promo } from "./components/promo/promo.component";
 import { Quote } from "./components/quote/quote.component";
 import { UnorderedList } from "./components/unordered-list/unordered-list.component";
+import { SITE_NAME } from "./config";
 
 // eslint-disable-next-line import/no-default-export
 export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
-  const { title, frontMatter, route } = pageOpts;
+  const { title, route } = pageOpts;
   const isStory = route.startsWith("/story/");
 
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="og:image" content={frontMatter.image} />
+        <title>{`${title} — ${SITE_NAME}`}</title>
+        <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Container as="article" className="grid gap-5 my-8 md:my-16">
         <MDXProvider

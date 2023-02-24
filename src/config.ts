@@ -1,3 +1,8 @@
+export const SITE_NAME = "techtrout";
+
+export const SLOGAN =
+  "The most trustworthy source of satirical tech news on the internet.";
+
 export const TWITTER_HANDLE = "techtrout";
 
 export const TWITTER_URL = `https://twitter.com/${TWITTER_HANDLE}`;
