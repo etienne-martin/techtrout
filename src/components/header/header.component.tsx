@@ -7,7 +7,7 @@ import { Logo } from "../logo/logo.component";
 
 export const Header: FC = () => {
   return (
-    <header className="border-solid border-b border-b-black py-5 bg-red-400 text-white">
+    <header className="border-solid border-b border-b-black py-5 md:py-8 bg-red-400 text-white">
       <Container className="flex">
         <Link href="/">
           <Logo />

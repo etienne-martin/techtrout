@@ -83,14 +83,13 @@ export const Footer: FC = () => {
           </div>
           <hr className="border-neutral-800" />
           <p className="text-neutral-700 text-xs">
-            You shouldn&apos;t trust everything you see on the internet. Our
-            content is intentionally exaggerated in order to comment on current
-            events in a satirical way. These articles are used to point out
-            flaws in the tech industry or to highlight the absurdity of certain
-            situations. While our content may look like serious tech news at
-            first glance, it&apos;s not meant to be taken seriously. We&apos;re
-            not here to inform you. If you&apos;re looking for actual news,
-            you&apos;ve come to the wrong place.
+            We&apos;re not here to inform you. Our content is intentionally
+            exaggerated in order to comment on current events in a satirical
+            way. These articles are used to point out flaws in the tech industry
+            or to highlight the absurdity of certain situations. While our
+            content may look like serious tech news at first glance, it&apos;s
+            not meant to be taken seriously. If you&apos;re looking for actual
+            news, you&apos;ve come to the wrong place.
           </p>
           <p className="text-neutral-700 text-xs">
             © {new Date().getFullYear()} {SITE_NAME}
