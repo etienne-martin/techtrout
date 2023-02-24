@@ -3,18 +3,21 @@ import { createElement } from "react";
 
 import { clsx } from "clsx";
 
-interface ContainerProps<Tag extends keyof HTMLElementTagNameMap>
+interface BoxProps<Tag extends keyof HTMLElementTagNameMap>
   extends HTMLAttributes<HTMLElementTagNameMap[Tag]> {
   as?: Tag;
 }
 
-export const Container = <Tag extends keyof HTMLElementTagNameMap = "div">({
+export const Box = <Tag extends keyof HTMLElementTagNameMap = "div">({
   as,
   className,
   ...otherProps
-}: ContainerProps<Tag>) => {
+}: BoxProps<Tag>) => {
   return createElement(as ?? "div", {
     ...otherProps,
-    className: clsx(className, "container mx-auto lg:max-w-3xl px-4"),
+    className: clsx(
+      className,
+      "w-full px-8 py-4 border-current border shadow-[4px_4px_0_0_currentColor]"
+    ),
   });
 };

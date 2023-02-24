@@ -29,6 +29,21 @@ export const Footer: FC = () => {
             <ul className="columns-2 gap-4 text-sm text-neutral-500">
               <li>
                 <Link href="/" className="hover:text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-white">
+                  Advertise
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-white">
+                  Press centre
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-white">
                   Subscribe
                 </Link>
               </li>

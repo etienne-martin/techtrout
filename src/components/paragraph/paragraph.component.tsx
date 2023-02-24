@@ -1,8 +1,18 @@
-import type { FC, PropsWithChildren } from "react";
+import type { FC, HTMLAttributes } from "react";
 
-export const Paragraph: FC<PropsWithChildren> = ({ children }) => {
+import { clsx } from "clsx";
+
+export const Paragraph: FC<HTMLAttributes<HTMLElementTagNameMap["p"]>> = ({
+  children,
+  className,
+}) => {
   return (
-    <p className="text-lg md:text-xl leading-relaxed md:leading-relaxed">
+    <p
+      className={clsx(
+        className,
+        "text-lg md:text-xl leading-relaxed md:leading-relaxed"
+      )}
+    >
       {children}
     </p>
   );

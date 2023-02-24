@@ -10,7 +10,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className={clsx(body.className, "flex flex-col min-h-full")}>
       <Header />
-      <main className="flex flex-grow">{children}</main>
+      <main className="flex flex-grow flex-col">{children}</main>
       <Footer />
     </div>
   );

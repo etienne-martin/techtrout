@@ -12,12 +12,14 @@ import { ListItem } from "./components/list-item/list-item.component";
 import { Metadata } from "./components/metadata/metadata.component";
 import { OrderedList } from "./components/ordered-list/ordered-list.component";
 import { Paragraph } from "./components/paragraph/paragraph.component";
+import { Promo } from "./components/promo/promo.component";
 import { Quote } from "./components/quote/quote.component";
 import { UnorderedList } from "./components/unordered-list/unordered-list.component";
 
 // eslint-disable-next-line import/no-default-export
 export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
-  const { title, frontMatter } = pageOpts;
+  const { title, frontMatter, route } = pageOpts;
+  const isStory = route.startsWith("/story/");
 
   return (
     <>
@@ -25,7 +27,7 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
         <title>{title}</title>
         <meta name="og:image" content={frontMatter.image} />
       </Head>
-      <Container as="article" className="grid gap-y-5 my-5 md:my-10">
+      <Container as="article" className="grid gap-5 my-8 md:my-16">
         <MDXProvider
           components={{
             h1: Heading.h1,
@@ -48,6 +50,11 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
         >
           {children}
         </MDXProvider>
+        {isStory && (
+          <div className="md:mt-8">
+            <Promo />
+          </div>
+        )}
       </Container>
     </>
   );
