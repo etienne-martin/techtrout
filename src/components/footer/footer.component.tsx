@@ -13,7 +13,11 @@ export const Footer: FC = () => {
       <Container as="footer">
         <div className="grid gap-8">
           <div>
-            <Link href="/" className="inline-flex">
+            <Link
+              href="/"
+              className="inline-flex"
+              aria-label="Go to the homepage"
+            >
               <Logo />
             </Link>
           </div>

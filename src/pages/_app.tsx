@@ -12,7 +12,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <Provider>
       <Head>
         <title>{`${SITE_NAME} — ${SLOGAN}`}</title>
+        <meta name="description" content={SLOGAN} />
         <link rel="icon" href="/favicon.png" type="image/png" />
+        <meta httpEquiv="Content-Language" content="en" />
       </Head>
       <Layout>
         <Script

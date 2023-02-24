@@ -9,10 +9,10 @@ export const Header: FC = () => {
   return (
     <header className="border-solid border-b border-b-black py-5 md:py-8 bg-red-400 text-white">
       <Container className="flex justify-between">
-        <Link href="/">
+        <Link href="/" aria-label="Go to the homepage">
           <Logo />
         </Link>
-        <Link href="/" className="space-y-1.5">
+        <Link href="/" className="space-y-1.5" aria-label="Open main menu">
           <div className="w-10 h-0.5 bg-current"></div>
           <div className="w-10 h-0.5 bg-current"></div>
           <div className="w-10 h-0.5 bg-current"></div>
