@@ -8,7 +8,7 @@ import { Paragraph } from "../components/paragraph/paragraph.component";
 import { TwitterIcon } from "../components/twitter-icon/twitter-icon.component";
 import { TWITTER_URL } from "../config";
 
-const Home: NextPage = () => {
+const NotFound: NextPage = () => {
   return (
     <Container className="grid gap-8 self-center py-24">
       <Box
@@ -37,4 +37,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default NotFound;
