@@ -18,6 +18,7 @@ export const Anchor: FC<AnchorHTMLAttributes<HTMLElementTagNameMap["a"]>> = ({
       className={twMerge(
         `
         text-red-400
+        hover:underline
       `,
         className
       )}
