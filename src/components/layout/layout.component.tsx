@@ -19,7 +19,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
       )}
     >
       <Header />
-      <main className="flex flex-grow flex-col">{children}</main>
+      <main className="flex flex-grow flex-col bg-white">{children}</main>
       <Footer />
     </div>
   );
