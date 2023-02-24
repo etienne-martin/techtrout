@@ -1,7 +1,7 @@
 import type { FC, AnchorHTMLAttributes } from "react";
 
-import { clsx } from "clsx";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 import { heading } from "../../styles/fonts";
 
@@ -18,11 +18,24 @@ export const Button: FC<AnchorHTMLAttributes<HTMLElementTagNameMap["a"]>> = ({
       {...otherProps}
       href={href}
       target={target}
-      className={clsx(
-        className,
+      className={twMerge(
         heading.className,
-        "bg-black text-white justify-center py-3 px-8 text-lg inline-flex items-center gap-2 whitespace-nowrap",
-        "md:text-xl md:py-4 md:px-10"
+        `
+        bg-black
+        text-white
+        justify-center
+        py-3
+        px-8
+        text-lg
+        inline-flex
+        items-center
+        gap-2
+        whitespace-nowrap
+        md:text-xl
+        md:py-4
+        md:px-10
+        `,
+        className
       )}
     >
       {children}

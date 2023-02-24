@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from "react";
 import { createElement } from "react";
 
-import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 interface ContainerProps<Tag extends keyof HTMLElementTagNameMap>
   extends HTMLAttributes<HTMLElementTagNameMap[Tag]> {
@@ -15,6 +15,14 @@ export const Container = <Tag extends keyof HTMLElementTagNameMap = "div">({
 }: ContainerProps<Tag>) => {
   return createElement(as ?? "div", {
     ...otherProps,
-    className: clsx(className, "container mx-auto lg:max-w-3xl px-4"),
+    className: twMerge(
+      `
+      container
+      mx-auto
+      lg:max-w-3xl
+      px-4
+      `,
+      className
+    ),
   });
 };

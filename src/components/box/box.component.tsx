@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from "react";
 import { createElement } from "react";
 
-import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 interface BoxProps<Tag extends keyof HTMLElementTagNameMap>
   extends HTMLAttributes<HTMLElementTagNameMap[Tag]> {
@@ -15,9 +15,16 @@ export const Box = <Tag extends keyof HTMLElementTagNameMap = "div">({
 }: BoxProps<Tag>) => {
   return createElement(as ?? "div", {
     ...otherProps,
-    className: clsx(
-      className,
-      "w-full px-8 py-4 border-current border shadow-[4px_4px_0_0_currentColor]"
+    className: twMerge(
+      `
+      w-full
+      px-8
+      py-4
+      border-current
+      border
+      shadow-[4px_4px_0_0_currentColor]
+      `,
+      className
     ),
   });
 };

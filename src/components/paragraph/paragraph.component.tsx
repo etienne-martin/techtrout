@@ -1,6 +1,6 @@
 import type { FC, HTMLAttributes } from "react";
 
-import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const Paragraph: FC<HTMLAttributes<HTMLElementTagNameMap["p"]>> = ({
   children,
@@ -8,9 +8,14 @@ export const Paragraph: FC<HTMLAttributes<HTMLElementTagNameMap["p"]>> = ({
 }) => {
   return (
     <p
-      className={clsx(
-        className,
-        "text-lg md:text-xl leading-relaxed md:leading-relaxed"
+      className={twMerge(
+        `
+        text-lg
+        md:text-xl
+        leading-relaxed
+        md:leading-relaxed
+        `,
+        className
       )}
     >
       {children}

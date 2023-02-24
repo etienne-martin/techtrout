@@ -1,6 +1,6 @@
 import type { FC, HTMLAttributes } from "react";
 
-import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const UnorderedList: FC<HTMLAttributes<HTMLElementTagNameMap["ol"]>> = ({
   children,
@@ -10,7 +10,15 @@ export const UnorderedList: FC<HTMLAttributes<HTMLElementTagNameMap["ol"]>> = ({
   return (
     <ul
       {...otherProps}
-      className={clsx("grid gap-y-2.5 list-disc pl-8", className)}
+      className={twMerge(
+        `
+        grid
+        gap-y-2.5
+        list-disc
+        pl-8
+        `,
+        className
+      )}
     >
       {children}
     </ul>

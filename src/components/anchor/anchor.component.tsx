@@ -1,6 +1,6 @@
 import type { AnchorHTMLAttributes, FC } from "react";
 
-import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const Anchor: FC<AnchorHTMLAttributes<HTMLElementTagNameMap["a"]>> = ({
   href,
@@ -15,7 +15,12 @@ export const Anchor: FC<AnchorHTMLAttributes<HTMLElementTagNameMap["a"]>> = ({
       {...otherProps}
       href={href}
       target={target}
-      className={clsx("text-red-400", className)}
+      className={twMerge(
+        `
+        text-red-400
+      `,
+        className
+      )}
     >
       {children}
     </a>

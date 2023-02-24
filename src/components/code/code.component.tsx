@@ -1,6 +1,6 @@
 import type { FC, HTMLAttributes } from "react";
 
-import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const Code: FC<HTMLAttributes<HTMLElementTagNameMap["code"]>> = ({
   children,
@@ -10,7 +10,14 @@ export const Code: FC<HTMLAttributes<HTMLElementTagNameMap["code"]>> = ({
   return (
     <code
       {...otherProps}
-      className={clsx("block bg-neutral-100 p-5", className)}
+      className={twMerge(
+        `
+        block
+        bg-neutral-100
+        p-5
+        `,
+        className
+      )}
     >
       {children}
     </code>
