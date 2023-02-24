@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <Provider>
       <Head>
         <title>{`${SITE_NAME} — ${SLOGAN}`}</title>
-        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </Head>
       <Layout>
         <Script
