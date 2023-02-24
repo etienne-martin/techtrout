@@ -3,6 +3,10 @@ const withNextra = require("nextra")({
 });
 
 module.exports = withNextra({
+  i18n: {
+    locales: ["en-US"],
+    defaultLocale: "en-US",
+  },
   headers: async () => [
     {
       source: "/:path*",
