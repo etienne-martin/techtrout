@@ -3,7 +3,7 @@ import type { FC } from "react";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
-import { SITE_NAME } from "../../config";
+import { SITE_NAME, TWITTER_URL } from "../../config";
 import { Container } from "../container/container.component";
 import { Logo } from "../logo/logo.component";
 
@@ -55,7 +55,7 @@ export const Footer: FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="hover:text-white">
+                <Link href={TWITTER_URL} className="hover:text-white">
                   Contact Us
                 </Link>
               </li>
