@@ -28,7 +28,7 @@ export const Footer: FC = () => {
                 </Balancer>
               </p>
             </div>
-            <ul className="columns-2 gap-4 text-sm text-neutral-500">
+            <ul className="columns-2 gap-4 text-sm text-neutral-400">
               <li>
                 <Link href="/" className="hover:text-white">
                   About
