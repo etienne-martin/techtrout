@@ -3,6 +3,7 @@ import type { FC } from "react";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
+import { SITE_NAME } from "../../config";
 import { Container } from "../container/container.component";
 import { Logo } from "../logo/logo.component";
 
@@ -92,7 +93,7 @@ export const Footer: FC = () => {
             you&apos;ve come to the wrong place.
           </p>
           <p className="text-neutral-700 text-xs">
-            © {new Date().getFullYear()} techtrout
+            © {new Date().getFullYear()} {SITE_NAME}
           </p>
         </div>
       </Container>

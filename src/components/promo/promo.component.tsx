@@ -2,7 +2,12 @@ import type { FC } from "react";
 
 import Balancer from "react-wrap-balancer";
 
-import { GITHUB_URL, TWITTER_HANDLE, TWITTER_URL } from "../../config";
+import {
+  GITHUB_URL,
+  SITE_NAME,
+  TWITTER_HANDLE,
+  TWITTER_URL,
+} from "../../config";
 import { Anchor } from "../anchor/anchor.component";
 import { Box } from "../box/box.component";
 import { Button } from "../button/button.component";
@@ -15,7 +20,7 @@ export const Promo: FC = () => {
     <div className="grid sm:grid-cols-2 gap-5">
       <Box className="grid gap-4 p-8 text-red-400">
         <Heading.h2>Break the story</Heading.h2>
-        <Paragraph>Techtrout is made possible by readers like you.</Paragraph>
+        <Paragraph>{SITE_NAME} is made possible by people like you.</Paragraph>
         <Button className="bg-red-400" href={GITHUB_URL}>
           Become a Contributor
         </Button>

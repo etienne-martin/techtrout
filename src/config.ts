@@ -1,9 +1,9 @@
-export const SITE_NAME = "techtrout";
+export const SITE_NAME = "The Tech Trout";
 
 export const SLOGAN =
   "The most trustworthy source of satirical tech news on the internet.";
 
-export const TWITTER_HANDLE = "techtrout";
+export const TWITTER_HANDLE = "TheTechTrout";
 
 export const TWITTER_URL = `https://twitter.com/${TWITTER_HANDLE}`;
 
