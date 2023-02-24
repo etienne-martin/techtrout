@@ -13,14 +13,14 @@ import { TwitterIcon } from "../twitter-icon/twitter-icon.component";
 export const Promo: FC = () => {
   return (
     <div className="grid sm:grid-cols-2 gap-5">
-      <Box as="footer" className="grid gap-4 text-red-400">
+      <Box className="grid gap-4 p-8 text-red-400">
         <Heading.h2>Break the story</Heading.h2>
         <Paragraph>Techtrout is made possible by readers like you.</Paragraph>
         <Button className="bg-red-400" href={GITHUB_URL}>
           Become a Contributor
         </Button>
       </Box>
-      <Box as="footer" className="grid gap-4">
+      <Box className="grid gap-4 p-8">
         <Heading.h2>
           <span className="flex items-center">
             <TwitterIcon className="w-6 h-6 mr-3" /> Follow us
