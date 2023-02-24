@@ -19,6 +19,7 @@ export const FancyImage: FC<ImageProps> = ({ src, alt }) => {
             -translate-x-5
             -translate-y-5
             pointer-events-none
+            z-10
             `
           )}
         >
@@ -32,6 +33,7 @@ export const FancyImage: FC<ImageProps> = ({ src, alt }) => {
           alt={alt}
           placeholder="blur"
           sizes="(max-width: 768px) 100vw, 768px"
+          className="saturate-0"
         />
       </div>
       <figcaption className="mt-2.5 text-xs px-4 sm:px-0">{alt}</figcaption>
