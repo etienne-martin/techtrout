@@ -10,9 +10,11 @@ export const Paragraph: FC<HTMLAttributes<HTMLElementTagNameMap["p"]>> = ({
     <p
       className={twMerge(
         `
-        text-lg
+        text-base
+        sm:text-lg
         md:text-xl
         leading-relaxed
+        sm:leading-relaxed
         md:leading-relaxed
         `,
         className
