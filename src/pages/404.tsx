@@ -10,9 +10,10 @@ import { TWITTER_URL } from "../config";
 
 const NotFound: NextPage = () => {
   return (
-    <Container className="grid gap-8 self-center py-24">
-      <Box
-        className={`
+    <div className="bg-red-400">
+      <Container className="grid gap-8 self-center py-24">
+        <Box
+          className={`
         self-center
         p-8
         md:p-16
@@ -21,19 +22,21 @@ const NotFound: NextPage = () => {
         items-start
         gap-6
         md:gap-8
+        bg-white
       `}
-      >
-        <Heading.h1>This website does not actually exist.</Heading.h1>
-        <Paragraph>
-          You can try browsing the site, but chances are you will be
-          disappointed. Try following us on Twitter instead.
-        </Paragraph>
-        <Button href={TWITTER_URL} target="_blank">
-          <TwitterIcon className="w-5 h-5" />
-          Follow us on Twitter
-        </Button>
-      </Box>
-    </Container>
+        >
+          <Heading.h1>This website does not actually exist.</Heading.h1>
+          <Paragraph>
+            You can try browsing the site, but chances are you will be
+            disappointed. Try following us on Twitter instead.
+          </Paragraph>
+          <Button href={TWITTER_URL} target="_blank">
+            <TwitterIcon className="w-5 h-5" />
+            Follow us on Twitter
+          </Button>
+        </Box>
+      </Container>
+    </div>
   );
 };
 

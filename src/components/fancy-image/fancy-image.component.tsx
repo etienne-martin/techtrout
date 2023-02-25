@@ -34,7 +34,7 @@ export const FancyImage: FC<ImageProps> = ({ src, alt, ...otherProps }) => {
           alt={alt}
           placeholder="blur"
           sizes="(max-width: 768px) 100vw, 768px"
-          className="saturate-0"
+          className="saturate-0 contrast-150"
         />
       </div>
       <figcaption className="mt-2.5 text-xs px-4 sm:px-0">{alt}</figcaption>

@@ -11,81 +11,47 @@ export const Footer: FC = () => {
   return (
     <footer className="bg-black py-12 text-white mt-auto">
       <Container as="footer">
-        <div className="grid gap-8">
-          <div>
-            <Link
-              href="/"
-              className="inline-flex"
-              aria-label="Go to the homepage"
-            >
-              <Logo />
-            </Link>
+        <div className="grid justify-items-start gap-8">
+          <Link
+            href="/"
+            className="inline-flex"
+            aria-label="Go to the homepage"
+          >
+            <Logo />
+          </Link>
+          <div className="grid gap-5 md:grid-cols-2 w-full">
+            <p className="text-sm">
+              <Balancer>
+                The most trustworthy source of satirical tech news on the
+                internet. Join us as we explore the increasingly depressing
+                landscape of technology, and discover what the future holds for
+                all of us.
+              </Balancer>
+            </p>
+            <nav>
+              <ul className="columns-2 gap-0 text-sm text-neutral-400">
+                {[
+                  { name: "About", url: "/" },
+                  { name: "Advertise", url: "/" },
+                  { name: "Careers", url: "/" },
+                  { name: "Contact Us", url: TWITTER_URL },
+                  { name: "FAQ", url: "/" },
+                  { name: "Press centre", url: "/" },
+                  { name: "Privacy Policy", url: "/privacy" },
+                  { name: "RSS Feed", url: "/" },
+                  { name: "Subscribe", url: "/" },
+                  { name: "Terms of Use", url: "/terms" },
+                ].map(({ name, url }) => (
+                  <li key={name} className="pr-4">
+                    <Link href={url} className="hover:text-white">
+                      {name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="grid gap-8">
-              <p className="text-sm">
-                <Balancer>
-                  The most trustworthy source of satirical tech news on the
-                  internet. Join us as we explore the increasingly depressing
-                  landscape of technology, and discover what the future holds
-                  for all of us.
-                </Balancer>
-              </p>
-            </div>
-            <ul className="columns-2 gap-4 text-sm text-neutral-400">
-              <li>
-                <Link href="/" className="hover:text-white">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-white">
-                  Advertise
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-white">
-                  Press centre
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-white">
-                  Subscribe
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-white">
-                  RSS Feed
-                </Link>
-              </li>
-              <li>
-                <Link href={TWITTER_URL} className="hover:text-white">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-white">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-white">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-white">
-                  Terms of Use
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-white">
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <hr className="border-neutral-800" />
+          <hr className="border-neutral-800 w-full" />
           <p className="text-neutral-700 text-xs">
             We&apos;re not here to inform you. Our content is intentionally
             exaggerated in order to comment on current events in a satirical
