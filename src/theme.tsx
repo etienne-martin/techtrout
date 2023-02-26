@@ -30,12 +30,7 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={`@${TWITTER_HANDLE}`} />
-        <meta name="twitter:creator" content={`@${TWITTER_HANDLE}`} />
         <meta name="twitter:title" content={title} />
-        <meta
-          name="twitter:description"
-          content="This is a sample description"
-        />
       </Head>
       <Container as="article" className="grid gap-5 my-8 md:my-16">
         <MDXProvider
