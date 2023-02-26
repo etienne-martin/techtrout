@@ -7,6 +7,9 @@ module.exports = withNextra({
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
+  publicRuntimeConfig: {
+    origin: process.env.ORIGIN ?? "http://localhost:3000",
+  },
   headers: async () => [
     {
       source: "/:path*",
