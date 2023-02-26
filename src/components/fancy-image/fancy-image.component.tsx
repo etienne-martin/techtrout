@@ -6,9 +6,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
-const { publicRuntimeConfig } = getConfig();
+const { origin } = getConfig().publicRuntimeConfig;
 
-const getSrc = (src: ImageProps["src"]) => {
+const getImageUrl = (src: ImageProps["src"]) => {
   if (typeof src === "string") {
     return src;
   } else if ("default" in src) {
@@ -17,7 +17,11 @@ const getSrc = (src: ImageProps["src"]) => {
 };
 
 export const FancyImage: FC<ImageProps> = ({ src, alt, ...otherProps }) => {
-  const absoluteUrl = `${publicRuntimeConfig.origin}${getSrc(src)}`;
+  const absoluteUrl = `${origin}/_next/image?${new URLSearchParams({
+    url: getImageUrl(src),
+    w: "1920",
+    q: "100",
+  })}`;
 
   return (
     <>
