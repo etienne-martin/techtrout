@@ -29,7 +29,7 @@ export const FancyImage: FC<ImageProps> = ({ src, alt, ...otherProps }) => {
         <meta property="og:image" content={absoluteUrl} />
         <meta property="twitter:image" content={absoluteUrl} />
       </Head>
-      <figure className="mt-10 -mx-4 sm:-mx-0">
+      <figure className="mt-5 md:mt-10 -mx-4 sm:-mx-0">
         <div className="relative">
           <div
             className={twMerge(

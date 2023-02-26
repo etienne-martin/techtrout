@@ -10,8 +10,8 @@ import { TWITTER_URL } from "../config";
 
 const NotFound: NextPage = () => {
   return (
-    <div className="bg-red-400">
-      <Container className="grid gap-8 self-center py-24">
+    <div className="flex flex-grow bg-red-400 py-4">
+      <Container className="grid gap-8 self-center">
         <Box
           className={`
         self-center

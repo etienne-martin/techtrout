@@ -9,7 +9,7 @@ import { Logo } from "../logo/logo.component";
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-black py-12 text-white mt-auto">
+    <footer className="bg-black py-8 md:py-12 text-white mt-auto">
       <Container as="footer">
         <div className="grid justify-items-start gap-8">
           <Link
