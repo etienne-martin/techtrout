@@ -27,7 +27,6 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
       <Head>
         <title>{`${title} — ${SITE_NAME}`}</title>
         <meta property="og:title" content={title} />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={`@${TWITTER_HANDLE}`} />
         <meta name="twitter:title" content={title} />
