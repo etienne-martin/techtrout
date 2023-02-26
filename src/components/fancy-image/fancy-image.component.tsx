@@ -17,13 +17,13 @@ const getSrc = (src: ImageProps["src"]) => {
 };
 
 export const FancyImage: FC<ImageProps> = ({ src, alt, ...otherProps }) => {
+  const absoluteUrl = `${publicRuntimeConfig.origin}${getSrc(src)}`;
+
   return (
     <>
       <Head>
-        <meta
-          property="og:image"
-          content={`${publicRuntimeConfig.origin}${getSrc(src)}`}
-        />
+        <meta property="og:image" content={absoluteUrl} />
+        <meta property="twitter:image" content={absoluteUrl} />
       </Head>
       <figure className="mt-10 -mx-4 sm:-mx-0">
         <div className="relative">
