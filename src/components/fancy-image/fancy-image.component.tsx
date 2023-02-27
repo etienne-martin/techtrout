@@ -20,7 +20,7 @@ export const FancyImage: FC<ImageProps> = ({ src, alt, ...otherProps }) => {
   const absoluteUrl = `${origin}/_next/image?${new URLSearchParams({
     url: getImageUrl(src),
     w: "1920",
-    q: "100",
+    q: "75",
   })}`;
 
   return (
