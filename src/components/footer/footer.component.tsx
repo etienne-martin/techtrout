@@ -3,7 +3,7 @@ import type { FC } from "react";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
-import { SITE_NAME, TWITTER_URL } from "../../config";
+import { SITE_NAME, SLOGAN, TWITTER_URL } from "../../config";
 import { Container } from "../container/container.component";
 import { Logo } from "../logo/logo.component";
 
@@ -22,8 +22,7 @@ export const Footer: FC = () => {
           <div className="grid gap-5 md:grid-cols-2 w-full">
             <p className="text-sm">
               <Balancer>
-                The most trustworthy source of satirical tech news on the
-                internet. Join us as we explore the increasingly confusing
+                {SLOGAN} Join us as we explore the increasingly confusing
                 landscape of technology, and discover what the future holds for
                 all of us.
               </Balancer>
