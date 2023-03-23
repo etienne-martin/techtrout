@@ -1,7 +1,7 @@
 export const SITE_NAME = "The Tech Trout";
 
 export const SLOGAN =
-  "The most trustworthy source of satirical tech news on the internet.";
+  "The most trustworthy source of AI-generated satirical tech news on the internet.";
 
 export const TWITTER_HANDLE = "TheTechTrout";
 
