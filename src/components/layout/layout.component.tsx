@@ -13,8 +13,8 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         body.className,
         `
         flex
-        flex-col
         min-h-full
+        flex-col
         `
       )}
     >

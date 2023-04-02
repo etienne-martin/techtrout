@@ -7,15 +7,15 @@ import { Logo } from "../logo/logo.component";
 
 export const Header: FC = () => {
   return (
-    <header className="border-solid border-b border-black py-5 md:py-8 bg-black text-white">
-      <Container className="flex justify-between items-center">
+    <header className="border-b border-solid border-black bg-black py-5 text-white md:py-8">
+      <Container className="flex items-center justify-between">
         <Link href="/" aria-label="Go to the homepage">
           <Logo />
         </Link>
-        <Link href="/" className="space-y-1.5 w-8" aria-label="Open main menu">
-          <div className="w-full h-0.5 bg-current"></div>
-          <div className="w-full h-0.5 bg-current"></div>
-          <div className="w-full h-0.5 bg-current"></div>
+        <Link href="/" className="w-8 space-y-1.5" aria-label="Open main menu">
+          <div className="h-0.5 w-full bg-current"></div>
+          <div className="h-0.5 w-full bg-current"></div>
+          <div className="h-0.5 w-full bg-current"></div>
         </Link>
       </Container>
     </header>

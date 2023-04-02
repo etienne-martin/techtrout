@@ -17,18 +17,18 @@ import { TwitterIcon } from "../twitter-icon/twitter-icon.component";
 
 export const Promo: FC = () => {
   return (
-    <div className="grid sm:grid-cols-2 gap-5">
-      <Box className="grid gap-4 p-8 content-start text-red-400">
+    <div className="grid gap-5 sm:grid-cols-2">
+      <Box className="grid content-start gap-4 p-8 text-red-400">
         <Heading.h2>Break the story</Heading.h2>
         <Paragraph>{SITE_NAME} is made possible by people like you.</Paragraph>
         <Button className="bg-red-400" href={GITHUB_URL}>
           Become a Contributor
         </Button>
       </Box>
-      <Box className="grid gap-4 p-8 content-start">
+      <Box className="grid content-start gap-4 p-8">
         <Heading.h2>
           <span className="flex items-center">
-            <TwitterIcon className="w-6 h-6 mr-3" /> Follow us
+            <TwitterIcon className="mr-3 h-6 w-6" /> Follow us
           </span>
         </Heading.h2>
         <Paragraph>

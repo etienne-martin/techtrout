@@ -8,7 +8,7 @@ export const Logo: FC = () => {
       height="81"
       fill="none"
       viewBox="0 0 611 81"
-      className="w-40 h-auto"
+      className="h-auto w-40"
     >
       <path
         fill="currentColor"
