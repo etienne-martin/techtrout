@@ -13,8 +13,8 @@ export const ListItem: FC<HTMLAttributes<HTMLElementTagNameMap["li"]>> = ({
       className={twMerge(
         `
         text-lg
-        md:text-xl
         leading-relaxed
+        md:text-xl
         md:leading-relaxed
         `,
         className

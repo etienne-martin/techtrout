@@ -13,8 +13,8 @@ export const OrderedList: FC<HTMLAttributes<HTMLElementTagNameMap["ol"]>> = ({
       className={twMerge(
         `
         grid
-        gap-y-2.5
         list-decimal
+        gap-y-2.5
         pl-8
         `,
         className

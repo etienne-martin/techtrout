@@ -24,19 +24,19 @@ export const Button: FC<AnchorHTMLAttributes<HTMLElementTagNameMap["a"]>> = ({
       className={twMerge(
         heading.className,
         `
-        bg-black
-        text-white
+        inline-flex
+        items-center
         justify-center
+        gap-2
+        whitespace-nowrap
+        bg-black
         py-3
         px-8
         text-lg
-        inline-flex
-        items-center
-        gap-2
-        whitespace-nowrap
-        md:text-xl
+        text-white
         md:py-4
         md:px-10
+        md:text-xl
         `,
         className
       )}

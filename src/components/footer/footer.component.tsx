@@ -9,7 +9,7 @@ import { Logo } from "../logo/logo.component";
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-black py-8 md:py-12 text-white mt-auto">
+    <footer className="mt-auto bg-black py-8 text-white md:py-12">
       <Container as="footer">
         <div className="grid justify-items-start gap-8">
           <Link
@@ -19,7 +19,7 @@ export const Footer: FC = () => {
           >
             <Logo />
           </Link>
-          <div className="grid gap-5 md:grid-cols-2 w-full">
+          <div className="grid w-full gap-5 md:grid-cols-2">
             <p className="text-sm">
               <Balancer>
                 {SLOGAN} Join us as we explore the increasingly confusing
@@ -50,8 +50,8 @@ export const Footer: FC = () => {
               </ul>
             </nav>
           </div>
-          <hr className="border-neutral-800 w-full" />
-          <p className="text-neutral-700 text-xs">
+          <hr className="w-full border-neutral-800" />
+          <p className="text-xs text-neutral-700">
             We&apos;re not here to inform you. Our content is intentionally
             exaggerated in order to comment on current events in a satirical
             way. These articles are used to point out flaws in the tech industry
@@ -59,7 +59,7 @@ export const Footer: FC = () => {
             content may look like serious tech news at first glance, it&apos;s
             not meant to be taken seriously.
           </p>
-          <p className="text-neutral-700 text-xs">
+          <p className="text-xs text-neutral-700">
             © {new Date().getFullYear()} {SITE_NAME}
           </p>
         </div>

@@ -6,7 +6,7 @@ interface MetadataProps {
 
 export const Metadata: FC<MetadataProps> = ({ dateIso8601 }) => {
   return (
-    <div className="uppercase flex items-center text-xs -mx-4 sm:-mx-0 pl-4 sm:pl-0">
+    <div className="-mx-4 flex items-center pl-4 text-xs uppercase sm:-mx-0 sm:pl-0">
       {new Date(dateIso8601)
         .toLocaleString("en-US", {
           timeZone: "UTC",
@@ -21,7 +21,7 @@ export const Metadata: FC<MetadataProps> = ({ dateIso8601 }) => {
          * the string to prevent mismatch between the server and client renders
          */
         .replaceAll(" at ", ", ")}
-      <span className="h-px bg-black flex-grow ml-4" />
+      <span className="ml-4 h-px flex-grow bg-black" />
     </div>
   );
 };

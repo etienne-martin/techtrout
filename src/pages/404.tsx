@@ -14,15 +14,15 @@ const NotFound: NextPage = () => {
       <Container className="grid gap-8 self-center">
         <Box
           className={`
-        self-center
-        p-8
-        md:p-16
         flex
         flex-col
         items-start
         gap-6
-        md:gap-8
+        self-center
         bg-white
+        p-8
+        md:gap-8
+        md:p-16
       `}
         >
           <Heading.h1>This website does not actually exist.</Heading.h1>
@@ -31,7 +31,7 @@ const NotFound: NextPage = () => {
             disappointed. Try following us on Twitter instead.
           </Paragraph>
           <Button href={TWITTER_URL} target="_blank">
-            <TwitterIcon className="w-5 h-5" />
+            <TwitterIcon className="h-5 w-5" />
             Follow us on Twitter
           </Button>
         </Box>
